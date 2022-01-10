@@ -1,3 +1,2 @@
 # Journal du projet
-
-*Ce fichier est destiné à recevoir un récapitulatif de ce que vous avez fait pendant la journée avec votre équipe. Vous êtes libres d'organiser le bilan de vos journées comme bon vous semble (ex : fait aujourd'hui - plans pour demain - blocages)*
+Jour 1: études de ressources et docs, test de création d'une extension pour changer les backgrounds d'une page internet et de changer toute les images du site web en question avec une image choisit au préalable. Nous cherchons encore le thème de notre projet mais nous avons quelques piste 
