@@ -2,5 +2,5 @@ let color = '#D79C5F';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ color });
-  console.log('Default background color set to %cgreen', `color: ${color}`);
+  console.log('Dango everywhere!');
 });
