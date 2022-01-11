@@ -1,0 +1,12 @@
+button{
+    width: 200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+.image {
+    margin: auto 20px;
+}
