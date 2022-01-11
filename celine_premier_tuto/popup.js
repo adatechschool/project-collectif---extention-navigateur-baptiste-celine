@@ -1,7 +1,7 @@
 // Initialize button with user's preferred color
 let changeColor = document.getElementById("changeColor");
 
-chrome.storage.sync.get("color", ({ color }) => {
+/*chrome.storage.sync.get("color", ({ color }) => {
   changeColor.style.backgroundColor = color;
 });
 
@@ -14,17 +14,26 @@ changeColor.addEventListener("click", async () => {
       function: setPageBackgroundColor,
     });
   });
-  
   // The body of this function will be executed as a content script inside the
   // current page
-
   function setPageBackgroundColor() {
-    chrome.storage.sync.get("color", ({ color }) => {
-      document.querySelector("h1").style.color = color;
-      let images = document.getElementsByTagName("img");
-      console.log(images);
+   chrome.storage.sync.get("color", ({ color }) => {
+     // document.querySelector("p").style.color = color;
+      let images = document.getElementsById("input");
+      console.log('hello world');
       for (var i = 0; i < images.length; i++) {
-        images[i].src = "https://cdn.discordapp.com/attachments/920638121178177566/930086210578305074/IMG_6315.jpg";
+        images[i].src ;
     }
     });
+  }*/
+  function verif_champ()
+  {
+  var mots_cles =document.getElementById ("input").value;
+          if (mots_cles == "")
+          {
+         alert ("Un champ n'est pas remplie");
+          return false;
+          }
+          console.log(mots_cles);
   }
+  document.getElementById("bouton").addEventListener("click", verif_champ)
