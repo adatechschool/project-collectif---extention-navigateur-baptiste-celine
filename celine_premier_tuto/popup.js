@@ -1,7 +1,7 @@
 // Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+/*let changeColor = document.getElementById("changeColor");
 
-/*chrome.storage.sync.get("color", ({ color }) => {
+chrome.storage.sync.get("color", ({ color }) => {
   changeColor.style.backgroundColor = color;
 });
 
@@ -15,25 +15,25 @@ changeColor.addEventListener("click", async () => {
     });
   });
   // The body of this function will be executed as a content script inside the
-  // current page
-  function setPageBackgroundColor() {
-   chrome.storage.sync.get("color", ({ color }) => {
-     // document.querySelector("p").style.color = color;
-      let images = document.getElementsById("input");
-      console.log('hello world');
-      for (var i = 0; i < images.length; i++) {
-        images[i].src ;
-    }
-    });
-  }*/
-  function verif_champ()
+  // current page*/
+  function setPageBackgroundColor(motscles) {
+      let images = document.getElementsByTagName("img");
+      for(i = 0; i < images.length; i++)
+      {
+        images[i].src = `${motscles}`
+        console.log(images[i].src)
+      }
+    };
+
+  function verifChamp()
   {
-  var mots_cles =document.getElementById ("input").value;
-          if (mots_cles == "")
+  var motscles =document.getElementById("input").value;
+          if (motscles == "")
           {
          alert ("Un champ n'est pas remplie");
           return false;
           }
-          console.log(mots_cles);
+          console.log(motscles);
+          setPageBackgroundColor(motscles)
   }
-  document.getElementById("bouton").addEventListener("click", verif_champ)
+  document.getElementById("bouton").addEventListener("click", verifChamp)

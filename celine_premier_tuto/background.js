@@ -1,6 +1,6 @@
-let color = '#D79C5F';
+let color = '#00ffff';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ color });
-  console.log('Dango everywhere!');
+  console.log('is that what you really want ? <.<');
 });
