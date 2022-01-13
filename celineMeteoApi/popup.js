@@ -1,9 +1,9 @@
 const CLEFAPI = '502bb5578bc8df2468a9394712df038c';
-const temperature = document.querySelector(".temperature");
-const temperatureRessentie = document.querySelector(".temperatureRessentie");
-const humidity = document.querySelector(".humidity");
-const pressure = document.querySelector(".pressure");
-const imgIcone = document.querySelector('.logo-meteo');
+const temperature = document.querySelector("#temperature");
+const temperatureRessentie = document.querySelector("#temperatureRessentie");
+const humidity = document.querySelector("#humidity");
+const pressure = document.querySelector("#pressure");
+const imgIcone = document.querySelector(".logo-meteo");
 let resultatsAPI;  
 
 if(navigator.geolocation) {

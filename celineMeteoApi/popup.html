@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <p class="temperature"></p>
-    <p class="temperatureRessentie"></p>
-    <p class="humidity"></p>
-    <p class="pressure"></p>
-    <img src="" class="logo-meteo">
+    <div id="container">
+        <div class="displayed" id="temperature"></div>
+        <div class="displayed" id="temperatureRessentie"></div>
+        <div class="displayed" id="humidity"></div>
+        <div class="displayed" id="pressure"></div>
+        <img id="imgLogo" src="" class="logo-meteo">
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
