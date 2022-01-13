@@ -1,5 +1,6 @@
 const CLEFAPI = '502bb5578bc8df2468a9394712df038c';
 const temperature = document.querySelector(".temperature");
+const imgIcone = document.querySelector('.logo-meteo');
 let resultatsAPI;  
 
 if(navigator.geolocation) {
@@ -20,5 +21,13 @@ function AppelAPI(long, lat) {
     .then((data) => {
         resultatsAPI = data;
         temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°C`;
+        // en fonction du temps renvoyer une icone plutôt
+        let heureActuelle = new Date().getHours();
+        if(heureActuelle >=6 && heureActuelle < 20) {
+            imgIcone.src = `weatherIcons/day/${resultatsAPI.current.weather[0].icon}.png`
+        } else {
+            imgIcone.src = `weatherIcons/night/${resultatsAPI.current.weather[0].icon}.png`}
+
+        console.log(resultatsAPI);
     })
 }
