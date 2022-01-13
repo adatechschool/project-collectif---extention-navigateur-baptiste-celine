@@ -4,6 +4,8 @@ const temperatureRessentie = document.querySelector("#temperatureRessentie");
 const humidity = document.querySelector("#humidity");
 const pressure = document.querySelector("#pressure");
 const imgIcone = document.querySelector(".logo-meteo");
+const chargementContainer = document.querySelector(".cssload-dots");
+const svg = document.querySelector("#svg");
 let resultatsAPI;  
 
 if(navigator.geolocation) {
@@ -36,5 +38,7 @@ function AppelAPI(long, lat) {
             imgIcone.src = `weatherIcons/night/${resultatsAPI.current.weather[0].icon}.png`}
 
         console.log(resultatsAPI);
+        chargementContainer.classList.add('disparition');
+        svg.classList.add('svgDisparition');
     })
 }
