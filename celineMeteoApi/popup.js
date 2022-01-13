@@ -1,5 +1,8 @@
 const CLEFAPI = '502bb5578bc8df2468a9394712df038c';
 const temperature = document.querySelector(".temperature");
+const temperatureRessentie = document.querySelector(".temperatureRessentie");
+const humidity = document.querySelector(".humidity");
+const pressure = document.querySelector(".pressure");
 const imgIcone = document.querySelector('.logo-meteo');
 let resultatsAPI;  
 
@@ -20,7 +23,11 @@ function AppelAPI(long, lat) {
     })
     .then((data) => {
         resultatsAPI = data;
-        temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°C`;
+        temperature.innerText = `Température actuelle : ${Math.trunc(resultatsAPI.current.temp)}°C`;
+        temperatureRessentie.innerText = `Température ressentie : ${Math.trunc(resultatsAPI.current.feels_like)}°C`;
+        humidity.innerText = `Humidité : ${resultatsAPI.current.humidity}%`;
+        pressure.innerText = `Pression : ${resultatsAPI.current.pressure}hPa`;
+        // pressure
         // en fonction du temps renvoyer une icone plutôt
         let heureActuelle = new Date().getHours();
         if(heureActuelle >=6 && heureActuelle < 20) {
