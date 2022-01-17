@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./page.css">
     <title>Page d'accueil</title>
 </head>
 <body>
-    <h1>Page d'accueil</h1>
+    <h1>Welcome</h1>
+    <p>Nous sommes le <span id="currentDate"></span></p>
+    <p>et il est <span id="currentHour"></span></p>
+    <div id="apiMeteo">
+        <div class="cssload-dots">
+            <div class="cssload-dot"></div>
+            <div class="cssload-dot"></div>
+            <div class="cssload-dot"></div>
+            <div class="cssload-dot"></div>
+            <div class="cssload-dot"></div>
+        </div>
+        
+        <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
+                    <!--<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>-->
+                </filter>
+            </defs>
+        </svg>
+        <div id="container">
+            
+            <div class="displayed" id="temperature"></div>
+            <div class="displayed" id="temperatureRessentie"></div>
+            <div class="displayed" id="humidity"></div>
+            <div class="displayed" id="pressure"></div>
+            <img id="imgLogo" src="" class="logo-meteo">
+        </div>
+        <script src="meteo.js"></script>
+    </div>
 </body>
 </html>

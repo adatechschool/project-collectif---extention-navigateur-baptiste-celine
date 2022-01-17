@@ -8,7 +8,6 @@ const chargementContainer = document.querySelector(".cssload-dots");
 const svg = document.querySelector("#svg");
 let resultatsAPI;  
 
-
 if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
         let long = position.coords.longitude;
@@ -44,3 +43,10 @@ function AppelAPI(long, lat) {
     })
 }
 
+let date = new Date();
+let options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+
+let currentDate = document.getElementById("currentDate");
+currentDate.innerHTML = date.toLocaleDateString("fr-FR", options);
+let currentTime = document.getElementById("currentHour");
+currentTime.innerHTML = date.getHours() + "h" + date.getMinutes();
