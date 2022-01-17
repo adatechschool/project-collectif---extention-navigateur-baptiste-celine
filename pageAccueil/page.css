@@ -9,9 +9,26 @@ body {
 .firstContainer {
 	margin: 20px;
 }
-.secondContainer {
+.thirdContainer {
 	margin: 20px;
 }
+/* todolist*/
+#addToDo {
+	width: 28px;
+	height: 28px;
+	text-align: center;
+}
+.secondContainer {
+	margin: 20px;
+	text-align: center;
+	width: 400px
+}
+#inputField {
+	width : 200px;
+	height : 23px;
+}
+
+
 button {
 	width: 90px;
 	font-family: 'Mochiy Pop P One', sans-serif; 
