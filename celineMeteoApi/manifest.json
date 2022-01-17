@@ -3,11 +3,11 @@
   
     "name": "Call meteo",
     "description": "Geolocalise you and give the current outside temperature",
-    "version": "1.0",
+    "version": "0.0.0.2",
   
     "browser_action": {
      "default_icon": "icon.png",
      "default_popup": "popup.html"
     },
-    "permissions": ["tabs", "geolocation"]
+    "permissions": ["geolocation"]
 }
