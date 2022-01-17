@@ -49,4 +49,4 @@ let options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
 let currentDate = document.getElementById("currentDate");
 currentDate.innerHTML = date.toLocaleDateString("fr-FR", options);
 let currentTime = document.getElementById("currentHour");
-currentTime.innerHTML = date.getHours() + "h" + date.getMinutes();
+currentTime.innerHTML = date.getHours() + "h" + ((date.getMinutes()<10?'0':'') + date.getMinutes());
