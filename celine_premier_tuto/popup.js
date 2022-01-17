@@ -1,5 +1,5 @@
 // Initialize button with user's preferred color
-/*let changeColor = document.getElementById("changeColor");
+let changeColor = document.getElementById("changeColor");
 
 chrome.storage.sync.get("color", ({ color }) => {
   changeColor.style.backgroundColor = color;
@@ -14,17 +14,20 @@ changeColor.addEventListener("click", async () => {
       function: setPageBackgroundColor,
     });
   });
+  
   // The body of this function will be executed as a content script inside the
-  // current page*/
-  function setPageBackgroundColor(motscles) {
-      let images = document.getElementsByTagName("img");
-      for(i = 0; i < images.length; i++)
-      {
-        images[i].src = `${motscles}`
-        console.log(images[i].src)
-      }
-    };
+  // current page
 
+  function setPageBackgroundColor() {
+    chrome.storage.sync.get("color", ({ color }) => {
+      document.querySelector("h1").style.color = color;
+      let images = document.getElementsByTagName("img");
+      console.log(images);
+      for (var i = 0; i < images.length; i++) {
+        images[i].src = motscles.value;
+    }
+    });
+  }
   function verifChamp()
   {
   var motscles =document.getElementById("input").value;
