@@ -2,6 +2,8 @@ body {
 	font-family: 'Mochiy Pop P One', sans-serif;  
 	font-size: 12px;
 	max-height : 100vw;
+	background-image: linear-gradient(to bottom, rgba(255,255, 255, 0.4), rgba(255, 255, 255, 0.8)), url("https://wallpapers.com/images/high/yellow-nature-z143cx7orr8d28al.jpg");
+	background-size: cover;
 }
 
 footer {
@@ -31,7 +33,8 @@ footer {
 .secondContainer {
 	margin: 20px;
 	text-align: center;
-	width: 400px
+	width: 400px;
+	
 }
 #inputField {
 	width : 200px;
