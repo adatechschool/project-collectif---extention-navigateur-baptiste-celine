@@ -1,0 +1,16 @@
+{
+    "name": "Google OpenID Connect Example",
+    "version": "1.0",
+    "description": "Use OpenID Connect to identify the user",
+    "manifest_version": 3,
+    "action": {
+      "default_title": "Sign In with Google Accounts"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+      "permissions": [
+    "identity"
+  ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApfj3/bDUcpGlTSfF2tycwo/aENwf7c1xBQ+kJ4V/06dBguDiCt+tfBQj+nzkWhRIGsOi174SqSgBl9SbY1PLlgzozUdLhRODoSOibfUehSMX0mGu3QOM8yEMleQc+K9j4RBeUTS5fQFg48mWrOudwBc1iRDMvjBPLosTAyhAl5Arb7lJn0/EsIDZdpFuJaGcY7XzNqClWEEpuCbPKspK1vu7PNNX9WCniySSFUhPmUEyuQVp/pIb/QK/Rw+OtBLCdIHBJRTRRqBaQ0I1G1qv5YxrAQZIH/LAKw8A4rbSzniRuG9rQMdfie4aNOD989zicVq6/v5RTcVKpfs16H4NYQIDAQAB"
+  }
