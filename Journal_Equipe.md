@@ -3,3 +3,4 @@ Jour 1: études de ressources et docs, test de création d'une extension pour ch
 Jour 2: extension qui renvoie vers linkedin, et extension qui récupere des images d'une api d'animaux aléatoirement.
 et formulaire d'url pour changer toute les images d'un site avec une autre demandé par l'utilisateur 
 Jour 5: réalisation d'une todolist, d'une extension météo qui appele une api et tout ca dans une nouvelle page du navigateur 
+jour 6: baptiste a travaillé sur la to do list avec le drop and drag et l'optimisation de celle-ci, et céline a travaillé sur l'authentification a l'aide d'un compte google 
