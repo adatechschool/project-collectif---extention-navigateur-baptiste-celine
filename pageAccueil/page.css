@@ -24,6 +24,10 @@ footer {
 .thirdContainer {
 	margin: 20px;
 }
+#searchNav {
+	width: 280px;
+	height: 24px;
+}
 /* todolist*/
 #addToDo {
 	width: 28px;
@@ -34,11 +38,15 @@ footer {
 	margin: 20px;
 	text-align: center;
 	width: 400px;
-	
 }
 #inputField {
 	width : 200px;
 	height : 23px;
+}
+
+#subButton {
+	font-family: 'Mochiy Pop P One', sans-serif;  
+	font-size: 12px;
 }
 
 

@@ -42,11 +42,16 @@
             </div>
         </div>  
         <div class="secondContainer">
+            <form id=search action="https://www.google.com/search" target="_blank" method="get">
+                <input id="searchNav" type="search" placeholder="Recherche Google" name="q" />
+                <input id="subButton" type="submit"/>
+            </form>
             <h2 class="title">To Do List</h2>
             <div class="container">
                 <input id="inputField" type="text"> <button id="addToDo">+</button>
                 <div id="toDoContainer"></div>
             </div>
+
             <script src="todo.js"></script>
         </div>
         <div class="thirdContainer">

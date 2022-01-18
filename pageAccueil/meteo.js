@@ -8,6 +8,7 @@ const chargementContainer = document.querySelector(".cssload-dots");
 const svg = document.querySelector("#svg");
 let resultatsAPI;  
 
+// demande de permission de la géolocalisation
 if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
         let long = position.coords.longitude;
@@ -18,6 +19,7 @@ if(navigator.geolocation) {
     })
 }
 
+// appel à l'API et traitement de la data
 function AppelAPI(long, lat) {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`)
     .then((reponse) => {
@@ -29,10 +31,15 @@ function AppelAPI(long, lat) {
         temperatureRessentie.innerText = `Température ressentie : ${Math.trunc(resultatsAPI.current.feels_like)}°C`;
         humidity.innerText = `Humidité : ${resultatsAPI.current.humidity}%`;
         pressure.innerText = `Pression : ${resultatsAPI.current.pressure}hPa`;
-        // pressure
-        // en fonction du temps renvoyer une icone plutôt
+       
+        
+        // prendre en considération le lever et couché du soleil pour le changement d'icone.
         let heureActuelle = new Date().getHours();
-        if(heureActuelle >=6 && heureActuelle < 20) {
+        let sunrise = new Date(resultatsAPI.current.sunrise * 1000);
+        let sunriseHour = sunrise.getHours();
+        let sunset = new Date(resultatsAPI.current.sunset * 1000);
+        let sunsetHour = sunset.getHours();
+        if(heureActuelle >= sunriseHour && heureActuelle < sunsetHour) {
             imgIcone.src = `weatherIcons/day/${resultatsAPI.current.weather[0].icon}.png`
         } else {
             imgIcone.src = `weatherIcons/night/${resultatsAPI.current.weather[0].icon}.png`}
@@ -43,6 +50,7 @@ function AppelAPI(long, lat) {
     })
 }
 
+// affichage de la date et de l'heure
 let date = new Date();
 let options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
 

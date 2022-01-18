@@ -6,6 +6,7 @@ function loadImg(animalPicted) {
     if (imageDiv.innerHTML) {
         imageDiv.innerHTML = "";
     }
+    //appel à l'API
     fetch(url)
         .then(response => {
             return response.json();
@@ -41,6 +42,7 @@ function selectOtter() {
     loadImg(animalPicted);
 };
 
+// passage des actions aux différents boutons (impossible de lier en HTML dans une extension)
 document.getElementById("cat").addEventListener("click", selectCat);
 document.getElementById("dog").addEventListener("click", selectDog);
 document.getElementById("bunny").addEventListener("click", selectBunny);
