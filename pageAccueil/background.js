@@ -1,6 +1,6 @@
 // background.js
 
-var newURL = "page.html";
+let newURL = "page.html";
 let clientId = '24380932461-mj0it1l1h4bp97b1ghc76tmr0t45c249.apps.googleusercontent.com'
 let redirectUri = `https://${chrome.runtime.id}.chromiumapp.org/`
 let nonce = Math.random().toString(36).substring(2, 15);
@@ -38,6 +38,8 @@ chrome.action.onClicked.addListener(function() {
           }
         },
     );
+
     console.log('action clicked');
     chrome.tabs.create({ url: newURL });
   });
+

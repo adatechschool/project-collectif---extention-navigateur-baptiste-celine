@@ -1,7 +1,7 @@
 body {
 	font-family: 'Mochiy Pop P One', sans-serif;  
 	font-size: 12px;
-	max-height : 100vw;
+	max-height : 100vh;
 	background-image: linear-gradient(rgba(255,255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://wallpapers.com/images/high/yellow-nature-z143cx7orr8d28al.jpg");
 	background-size: cover;
 }
