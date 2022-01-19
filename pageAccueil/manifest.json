@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+  
+    "name": "Page d'accueil",
+    "description": "Regroupement de toutes nos belles fonctionnalités",
+    "version": "0.0.0.1",
+    "action": {
+        "default_title": "Page d'accueil"
+      },
+    "icons": { 
+        "16": "favicon.ico",
+        "48": "favicon.ico",
+        "128": "favicon.ico" },
+
+    "background": {
+        "service_worker": "background.js"
+      },
+
+    "permissions": ["tabs", "geolocation", "identity"],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0nhkbbicpYMkM+KhcwYVzStBkv/uWJbEzbl0zlHPzzHDQYJxaC2FTl/HFLZugIIm141V84ql8LMdzZNv/qBFD5bjzxjXPVOCOYECV7daYNUS8+acFqd3Y+hY6jRWXxupOQD+VWpKFMxP0N8C/z23p4vel6c8NYFKM1gyJWq2tSntMKIYNsZVzvcnzfxyrmMCCvjAn7yumYfwg5U7DFTZM4gZjscgupl3ooqyx0YLsHcXw02ZUqf+Kyq1RF9dkOcYMmG/UdEf0cA2OLGH/9siiIRfovNcDFobT1xJ+egIwJbiz1dmKSiKnI2YZyBqwGzJ0FbRBmDaFo8eLV+vmK9+WwIDAQAB"
+}
