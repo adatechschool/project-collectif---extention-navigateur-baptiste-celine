@@ -1,0 +1,10 @@
+{
+    "name": "todo list extension",
+    "description": "Make your list come through",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup":"index.html"
+    },
+    "permissions": ["tabs"]
+}
