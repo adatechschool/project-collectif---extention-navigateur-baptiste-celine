@@ -8,6 +8,7 @@ const chargementContainer = document.querySelector(".cssload-dots");
 const svg = document.querySelector("#svg");
 let resultatsAPI;  
 
+
 if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
         let long = position.coords.longitude;
@@ -42,3 +43,4 @@ function AppelAPI(long, lat) {
         svg.classList.add('svgDisparition');
     })
 }
+

@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./page.css">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./todoBis.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+    crossorigin="anonymous"
+  />
     <title>Page d'accueil</title>
 </head>
 <body>
@@ -47,13 +58,30 @@
                 <input id="searchNav" type="search" placeholder="Recherche Google" name="q" />
                 <input id="subButton" type="submit"/>
             </form>
-            <h2 class="title">To Do List</h2>
+            <!-- <h2 class="title">To Do List</h2>
             <div class="container">
                 <input id="inputField" type="text"> <button id="addToDo">+</button>
                 <div id="toDoContainer"></div>
-            </div>
-
-            <script src="todo.js"></script>
+            </div> -->
+            <header><h1>My To do list </h1></header>
+            <form>
+                <input type="text" class="todo-input" />
+                <button class="todo-button" type="submit">
+                  <i class="fas fa-plus-square"></i>
+                </button>
+                <div class="select">
+                  <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Done</option>
+                    <option value="uncompleted">To Do</option>
+                  </select>
+                </div>
+              </form>
+              <div class="todo-container">
+                <ul class="todo-list"></ul>
+              </div>
+              <script src="./todoBis.js"></script>
+            <!-- <script src="todo.js"></script> -->
         </div>
         <div class="thirdContainer">
             <div id="unsplash">

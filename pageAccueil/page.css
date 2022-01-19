@@ -1,6 +1,6 @@
 body {
 	font-family: 'Mochiy Pop P One', sans-serif;  
-	font-size: 12px;
+	font-size: 15px;
 	max-height : 100vh;
 	background-image: linear-gradient(rgba(255,255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://wallpapers.com/images/high/yellow-nature-z143cx7orr8d28al.jpg");
 	background-size: cover;
@@ -29,25 +29,25 @@ footer {
 	height: 24px;
 }
 /* todolist*/
-#addToDo {
+/* #addToDo {
 	width: 28px;
 	height: 28px;
 	text-align: center;
-}
+} */
 .secondContainer {
 	margin: 20px;
 	text-align: center;
 	width: 400px;
 }
-#inputField {
+/* #inputField {
 	width : 200px;
 	height : 23px;
-}
+} */
 
-#subButton {
+/* #subButton {
 	font-family: 'Mochiy Pop P One', sans-serif;  
 	font-size: 12px;
-}
+} */
 
 
 button {
